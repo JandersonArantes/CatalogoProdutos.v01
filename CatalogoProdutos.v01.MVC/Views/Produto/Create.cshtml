@@ -1,0 +1,35 @@
+﻿@model CatalogoProdutos.v01.MVC.Models.Produto
+
+@{
+    ViewBag.Title = "Cadastrar Produto";
+}
+
+<h2>Cadastrar Produto</h2>
+
+@if (TempData["Mensagem"] != null)
+{
+    <div class="alert alert-success">@TempData["Mensagem"]</div>
+}
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(m => m.Nome)
+        @Html.TextBoxFor(m => m.Nome)
+        @Html.ValidationMessageFor(m => m.Nome)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Preco)
+        @Html.TextBoxFor(m => m.Preco)
+        @Html.ValidationMessageFor(m => m.Preco)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Categoria)
+        @Html.TextBoxFor(m => m.Categoria)
+    </div>
+
+    <button type="submit">Cadastrar</button>
+}
+
