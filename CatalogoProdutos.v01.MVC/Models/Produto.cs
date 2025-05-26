@@ -12,6 +12,5 @@ namespace CatalogoProdutos.v01.MVC.Models
         [Required(ErrorMessage = "O preço é obrigatório.")]
         [Range(0.01, double.MaxValue, ErrorMessage = "Informe um valor válido.")]
         public double Preco { get; set; }
-
     }
 }
